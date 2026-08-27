@@ -99,10 +99,8 @@ Input (48x48 grayscale)
 
 | Metric | Value |
 |---|---|
-| Training Accuracy | *add your result* |
-| Validation Accuracy | *add your result* |
-
-> Add a training/validation accuracy-loss plot here for extra credibility.
+| Training Accuracy |  |
+| Validation Accuracy |  |
 
 ---
 
