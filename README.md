@@ -6,16 +6,6 @@ From raw dataset preprocessing to live webcam predictions — this repo covers t
 
 ---
 
-## 🎥 Demo
-
-> 🔗 *Add a GIF or screenshot of the real-time detection here*
-
-```
-[ webcam feed ] --> [ face detection ] --> [ CNN model ] --> [ Happy 😀 / Sad 😢 / Angry 😠 / ... ]
-```
-
----
-
 ## 📌 Features
 
 - 🖼️ Preprocessing of facial emotion datasets (grayscale conversion + resizing)
@@ -43,14 +33,12 @@ From raw dataset preprocessing to live webcam predictions — this repo covers t
 ```
 face-emotion-detection/
 │
-├── dataset/                 # Training & validation images (per-emotion folders)
-├── model/
-│   └── emotion_model.h5     # Saved trained model
-├── src/
-│   ├── preprocess.ipynb        # Dataset loading & preprocessing
-│   ├── train.ipynb              # CNN model building & training
-│   └── detect_realtime.ipynb   # Real-time webcam emotion detection
-├── requirements.txt
+├── original_dataset/                 # Training & validation images (per-emotion folders)
+├── preprocessed_dataset/                 # Training & validation images (peprocessed folders)
+├── Face_Emotion_Detector.ipynb        # Dataset loading & preprocessing
+├── Model_Building.ipynb              # CNN model building & training
+├── Model.keras              # Saved trained model
+├── webcam.ipynb              # Real-time webcam emotion detection
 └── README.md
 ```
 
@@ -70,12 +58,12 @@ Place the extracted dataset inside the `dataset/` directory before training.
 
 ### 1. Train the model
 ```bash
-python src/train.ipynb
+python src/Model_Building.ipynb
 ```
 
 ### 2. Run real-time detection
 ```bash
-python src/detect_realtime.ipynb
+python src/webcam.ipynb
 ```
 Press **`q`** to quit the webcam window.
 
@@ -99,8 +87,8 @@ Input (48x48 grayscale)
 
 | Metric | Value |
 |---|---|
-| Training Accuracy |  |
-| Validation Accuracy |  |
+| Training Accuracy | 0.91 |
+| Validation Accuracy | 0.89 |
 
 ---
 
